@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Inicial</title>
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Bem-vindo!</h1>
+        <form action="php/processar_login.php" method="post">
+            <input type="email" name="email" placeholder="Email" required>
+            <input type="password" name="senha" placeholder="Senha" required>
+            <button type="submit" class="login-btn">Login</button>
+        </form>
+
+        <div class="or">OU</div>
+
+        <a href="cadastro.html"><button class="register-btn">Cadastrar-se</button></a>
+    </div>
+</body>
+</html>
