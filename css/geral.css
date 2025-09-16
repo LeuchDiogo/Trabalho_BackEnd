@@ -1,0 +1,119 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #6b73ff, #000dff);
+    color: #333;
+}
+
+.container {
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 10px;
+    width: 350px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    text-align: center;
+}
+
+h1, h2 {
+    margin-bottom: 30px;
+    color: #000dff;
+}
+
+/* Inputs */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="date"],
+select {
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0 20px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Botões */
+button,
+input[type="submit"] {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+/* Cores dos botões */
+.login-btn,
+input[type="submit"].login-btn {
+    background-color: #000dff;
+    color: #fff;
+}
+
+.login-btn:hover,
+input[type="submit"].login-btn:hover {
+    background-color: #4a5fff;
+}
+
+.register-btn,
+input[type="submit"].register-btn {
+    background-color: #f1f1f1;
+    color: #44b4ff;
+}
+
+.register-btn:hover,
+input[type="submit"].register-btn:hover {
+    background-color: #ddd;
+}
+
+.or {
+    margin: 15px 0;
+    font-weight: bold;
+}
+
+/* Pequenos ajustes para select */
+select {
+    cursor: pointer;
+}
+
+.input-group {
+  position: relative;
+  margin-bottom: 15px;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 12px 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.input-group label {
+  position: absolute;
+  left: 10px;
+  top: 12px;
+  color: #999;
+  pointer-events: none;
+  transition: 0.2s;
+}
+
+.input-group input:focus + label,
+.input-group input:not(:placeholder-shown) + label {
+  top: -8px;
+  left: 10px;
+  font-size: 12px;
+  color: #555;
+  background: white;
+  padding: 0 3px;
+}

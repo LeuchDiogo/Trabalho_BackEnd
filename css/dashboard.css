@@ -1,0 +1,111 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f4f4f9;
+    color: #333;
+}
+h1, h2 { margin-bottom: 20px; }
+.container {
+    width: 95%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    transform: scale(0.9);
+    transform-origin: top center;
+}
+.box {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    margin-bottom: 30px;
+}
+
+
+.top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.top-bar form button {
+    padding: 8px 15px;
+    background: #0015ffff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.top-bar form button:hover {
+    background: #c0392b;
+}
+
+.form-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+.form-row input, .form-row button {
+    flex: 1;
+    min-width: 100px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.form-row button {
+    background: #4a98ff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    height: 36px;
+}
+.form-row button:hover {
+    background: #4575a0;
+}
+
+/* Tabela */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+th, td {
+    border-bottom: 1px solid #ddd;
+    padding: 8px 10px;
+    text-align: center;
+}
+th {
+    background-color: #05c5ff;
+    color: white;
+    position: sticky;
+    top: 0;
+}
+tr:hover { background-color: #f1f1f1; }
+/* Ajuste colunas */
+th.peito, td.peito { width: 80px; }
+th.braco_d, td.braco_d,
+th.braco_e, td.braco_e,
+th.perna_d, td.perna_d,
+th.perna_e, td.perna_e,
+th.panturrilha_d, td.panturrilha_d,
+th.panturrilha_e, td.panturrilha_e { width: 90px; }
+
+/* Botão Apagar na tabela */
+table form button {
+    padding: 5px 10px;
+    background: #e74c3c;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+table form button:hover {
+    background: #c0392b;
+}
+
+@media(max-width:900px) {
+    .form-row { flex-direction: column; }
+    .form-row input, .form-row button { width: 100%; }
+    .top-bar { flex-direction: column; gap: 10px; }
+}

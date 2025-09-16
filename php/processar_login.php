@@ -1,20 +1,24 @@
 <?php
+session_start();
 require("conexao.php");
 
 $email = $_POST['email'];
 $senha = $_POST['senha'];
 
-$sql = "SELECT * FROM usuarios WHERE email = '$email' AND senha = '$senha'";
+$sql = "SELECT id, nome FROM usuarios
+        WHERE email = '$email' AND senha = '$senha'";
 $result = $conexao->query($sql);
 
-if ($result->num_rows > 0) {
-    echo "Login realizado com sucesso!";
-    // aqui você pode redirecionar:
-    // header("Location: ../pagina_inicial.php");
-    // exit;
+if ($result && $result->num_rows > 0) {
+    $usuario = $result->fetch_assoc();
+
+    $_SESSION['usuario_id']   = $usuario['id'];
+    $_SESSION['usuario_nome'] = $usuario['nome'];   // <-- guarda o nome
+
+    header("Location: ../dashboard.php");
+    exit;
 } else {
     echo "Email ou senha incorretos.";
 }
 
 $conexao->close();
-?>
