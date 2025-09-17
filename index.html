@@ -3,21 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Página Inicial</title>
+    <title>Medida Certa</title>
     <link rel="stylesheet" href="css/index.css">
+    <link rel="shortcut icon" href="css/favicon.ico" type="image/x-icon">
+
 </head>
 <body>
     <div class="container">
-        <h1>Bem-vindo!</h1>
-        <form action="php/processar_login.php" method="post">
-            <input type="email" name="email" placeholder="Email" required>
-            <input type="password" name="senha" placeholder="Senha" required>
-            <button type="submit" class="login-btn">Login</button>
-        </form>
+    <h1>Bem-vindo à Medida Certa</h1>
+    <p class="subtitulo">Logue para continuar</p>
 
-        <div class="or">OU</div>
+    <form action="php/processar_login.php" method="post">
+        <input type="email" name="email" placeholder="Email" required>
+        <input type="password" name="senha" placeholder="Senha" required>
+        <button type="submit" class="login-btn">Login</button>
+    </form>
 
-        <a href="formularios/formulario_Usuario.html"><button class="register-btn">Cadastrar-se</button></a>
-    </div>
+    <div class="or">OU</div>
+
+    <a href="formularios/formulario_Usuario.html" class="register-btn">Cadastrar-se</a>
+</div>
 </body>
 </html>

@@ -45,7 +45,8 @@ $result = $conexao->query(
 <head>
 <meta charset="UTF-8">
 <title>Dashboard</title>
-<link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+     <link rel="shortcut icon" href="css/favicon.ico" type="image/x-icon">
 </head>
 <body>
 

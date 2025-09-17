@@ -15,7 +15,7 @@
     echo "Cadastro Realizado Com sucesso";
 
         if ($sql) {
-        header("Location: ../formularios/login.html"); 
+        header("Location: ../index.html"); 
         exit;
     } else {
         echo "Erro ao cadastrar usuário.";
