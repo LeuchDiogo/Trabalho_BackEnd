@@ -13,12 +13,15 @@ if ($result && $result->num_rows > 0) {
     $usuario = $result->fetch_assoc();
 
     $_SESSION['usuario_id']   = $usuario['id'];
-    $_SESSION['usuario_nome'] = $usuario['nome'];   // <-- guarda o nome
+    $_SESSION['usuario_nome'] = $usuario['nome'];
 
     header("Location: ../dashboard.php");
     exit;
 } else {
-    echo "Email ou senha incorretos.";
+    echo "<script>
+            alert('Email ou senha incorretos!');
+            window.history.back();
+          </script>";
 }
 
 $conexao->close();
