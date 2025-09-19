@@ -3,7 +3,7 @@
     require("php/conexao.php");
 
     if (!isset($_SESSION['usuario_id'])) {
-        header("Location: login.html");
+        header("Location: ../index.html");
         exit;
     }
 
@@ -21,7 +21,6 @@
         $editar_dados = $result_editar->fetch_assoc();
         $stmt->close();
     }
-
 
     if ($_SERVER['REQUEST_METHOD'] === 'POST' && !isset($_POST['apagar'])) {
 
@@ -43,7 +42,7 @@
         if ($data && $peso && $altura && $ombro && $abdomen && $quadril && $peito &&
             $braco_d && $braco_e && $perna_d && $perna_e && $panturrilha_d && $panturrilha_e) {
 
-            if ($id_editar) {t
+            if ($id_editar) {
                 $stmt = $conexao->prepare("UPDATE medidas_corporais SET
                     data_medicao=?, peso=?, altura=?, ombro=?, abdomen=?, quadril=?, peito=?,
                     braco_d=?, braco_e=?, perna_d=?, perna_e=?, panturrilha_d=?, panturrilha_e=?
